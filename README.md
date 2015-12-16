@@ -1,6 +1,6 @@
 # Row filter example:
 
-
+This is a project that shows row filter capability of JBoss Data Virtualization (Teiid). I'm using JDV 6.2 when creating this project. 
 Start database, create table and insert sample data:
 
 
@@ -75,6 +75,18 @@ cd $JDV_HOME/dataVirtualization/teiid-adminshell
 unzip teiid-8.7.1.6_2-redhat-6-adminshell-dist.zip
 cd teiid-adminshell-8.7.1.6_2-redhat-6/
 ```
+
+Clone this project (https://github.com/ejlp12/jboss_dv_row_filter_example.git)
+
+```
+git clone https://github.com/ejlp12/jboss_dv_row_filter_example.git
+```
+
+Export the project directory to JBoss Developer Studio (JBDS). I'm using JBDS 8.1 when creating this project.
+
+You can see the row filter setting in the existing VDB as shown below:
+
+![image](https://cloud.githubusercontent.com/assets/3068071/11835166/0787e636-a405-11e5-9209-d4dcb0f0e626.png)
 
 Deploy VDB:
 
