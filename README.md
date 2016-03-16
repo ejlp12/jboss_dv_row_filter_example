@@ -1,7 +1,11 @@
 # Row filter example:
 
-This is a project that shows row filter capability of JBoss Data Virtualization (Teiid). I'm using JDV 6.2 when creating this project. 
-Start database, create table and insert sample data:
+This is a project that shows row filter capability of JBoss Data Virtualization (Teiid). I'm using JDV 6.2 when creating this project.
+
+Use case:
+User will only get list of city that match with his group. Let say Unyil is in group A then if user unyil query to table GROUPCITYMAP he will only get all the cities where the groupname is A even though he execute a query without adding any WHERE clause.
+
+Following is a script for starting database, create table and insert sample data into H2 database (embedded in JBoss EAP):
 
 
 ```
@@ -87,6 +91,8 @@ Export the project directory to JBoss Developer Studio (JBDS). I'm using JBDS 8.
 You can see the row filter setting in the existing VDB as shown below:
 
 ![image](https://cloud.githubusercontent.com/assets/3068071/11835166/0787e636-a405-11e5-9209-d4dcb0f0e626.png)
+
+Note that when user `unyil` is connected to JDV via JDBC/ODBC, function `user()` in the SQL in will return `unyil@teiid-security` so that we need to remove `@teiid-security` when we do the filtering.
 
 Deploy VDB:
 
